@@ -45,7 +45,7 @@ class calculate():
         self.button6.grid(row=2, column=2, padx=3, pady=3)
         self.button6.config(font=("Arial", 18))
 
-        self.button7 = Button(self.root, text="7", width=3, command=lambda:self.calc('7'),relief=RAISED,bg='Light blue')
+        self.button7 = Button(self.root, text="7", width=3, command=lambda:self.calcd('7'),relief=RAISED,bg='Light blue')
         self.button7.grid(row=3, column=0, padx=3, pady=3)
         self.button7.config(font=("Arial", 18))
 
@@ -65,7 +65,7 @@ class calculate():
         self.button_open.grid(row=4, column=0, padx=3, pady=3)
         self.button_open.config(font=("Arial", 18))
 
-        self.button_close = Button(self.root, text=")", width=3, command=lambda: self.calc(')'),relief=RAISED, bg='White')
+        self.button_close = Button(self.root, text=")", width=3, command=lambda: self.calcd(')'),relief=RAISED, bg='White')
         self.button_close.grid(row=4, column=2, padx=3, pady=3)
         self.button_close.config(font=("Arial", 18))
 
@@ -168,7 +168,7 @@ class calculate():
         elif key == "cos":
             self.resultwindow.insert(END, "=" + str(math.cos(int(self.resultwindow.get()))))
         elif key == "(":
-            self.resultwindow.insert(END, "(")
+            self.resultwindow.insert(END, "(+")
         elif key == ")":
             self.resultwindow.insert(END, ")")
         elif key == "n!":
