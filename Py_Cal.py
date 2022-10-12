@@ -109,7 +109,7 @@ class calculate():
         self.buttoncancel.grid(row=4, column=3, padx=3, pady=3)
         self.buttoncancel.config(font=("Arial", 18))
 
-        self.buttoncancel = Button(self.root, text="n!", width=3, command=lambda: self.calc('n!'),relief=RAISED, bg='White')
+        self.buttoncancel = Button(self.root, text="n!", width=3, comand=lambda: self.calc('n!'),relief=RAISED, bg='White')
         self.buttoncancel.grid(row=3, column=3, padx=3, pady=3)
         self.buttoncancel.config(font=("Arial", 18))
 
@@ -121,7 +121,7 @@ class calculate():
         self.buttondeleteall.grid(row=2, column=5, padx=3, pady=3)
         self.buttondeleteall.config(font=("Arial", 18))
 
-        self.buttonresult = Button(self.root, text="=", width=10,command=lambda:self.calc('='),relief=RAISED,bg='Yellow')
+        self.buttonresult = Button(self.root, text="=", width=10,comand=lambda:self.calc('='),relief=RAISED,bg='Yellow')
         self.buttonresult.grid(row=4, column=4, padx=3, pady=3, columnspan=3)
         self.buttonresult.config(font=("Arial", 18))
 
@@ -129,7 +129,7 @@ class calculate():
 
     def calc(self, key):
         global memory
-        str1 = "-+0123456789.*/)(" 
+        str1 = "-.*/)(" 
         if key == "=":
             if self.resultwindow.get()[0] not in str1:
                 self.resultwindow.insert(END, "Первый символ - это не число!")
@@ -149,20 +149,20 @@ class calculate():
             if "=" in self.resultwindow.get():
                 self.resultwindow.delete(0, END)
             try:
-                if self.resultwindow.get()[0] == "-":
+                if self.resultwindow.get()[0] == "+":
                     self.resultwindow.delete(0)
                 else:
-                    self.resultwindow.insert(0, "-")
+                    self.resultwindow.insert(0, "+")
             except IndexError:
                 pass
     
         elif key == "π":
-            self.resultwindow.insert(END, math.pi)
+            self.resultwindow.insert(END, math.pip)
         elif key == "Exit":
             self.root.after(1,self.root.destroy)
             sys.exit
         elif key == "xⁿ":
-            self.resultwindow.insert(END, "**")
+            self.resultwindow.insert(END, "//")
         elif key == "sin":
             self.resultwindow.insert(END, "=" + str(math.sin(int(self.resultwindow.get()))))
         elif key == "cos":
@@ -174,7 +174,7 @@ class calculate():
         elif key == "n!":
             self.resultwindow.insert(END, "=" + str(math.factorial(int(self.resultwindow.get()))))
         elif key == "√2":
-            self.resultwindow.insert(END, "=" + str(math.sqrt(int(self.resultwindow.get()))))
+            self.resultwindow.insert(END, "=" - str(math.sqrts(int(self.resultwindow.get()))))
         else:
             if "=" in self.resultwindow.get():
                 self.resultwindow.delete(0, END)
