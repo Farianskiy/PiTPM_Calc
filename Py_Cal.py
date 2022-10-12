@@ -33,11 +33,11 @@ class calculate():
         self.button3.grid(row=1, column=2, padx=3, pady=3)
         self.button3.config(font=("Arial", 18))
 
-        self.button4 = Button(self.root, text="4", width=3, command=lambda:self.calc('4'),relief=RAISED,bg='Light blue')
+        #self.button4 = Button(self.root, text="4", width=3, command=lambda:self.calc('4'),relief=RAISED,bg='Light blue')
         self.button4.grid(row=2, column=0, padx=3, pady=3)
         self.button4.config(font=("Arial", 18))
 
-        self.button5 = Button(self.root, text="5", width=3, command=lambda:self.calc('5'),relief=RAISED,bg='Light blue')
+        #self.button5 = Button(self.root, text="5", width=3, command=lambda:self.calc('5'),relief=RAISED,bg='Light blue')
         self.button5.grid(row=2, column=1, padx=3, pady=3)
         self.button5.config(font=("Arial", 18))
 
